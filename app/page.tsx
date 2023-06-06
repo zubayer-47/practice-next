@@ -1,6 +1,5 @@
 import NavBar from "@/components/NavBar";
 
-// export func
 interface blogs {
   id: number;
   title: string;
