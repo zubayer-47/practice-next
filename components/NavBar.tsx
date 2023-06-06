@@ -5,7 +5,7 @@ export default function NavBar() {
     <div className="py-2 px-8  flex justify-between bg-indigo-500 text-white">
       <div className="flex gap-x-5 items-center">
         <Link href="/"> Home</Link>
-        <Link href="/" className="">
+        <Link href="/team">
           Team
         </Link>
       </div>
