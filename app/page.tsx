@@ -28,7 +28,7 @@ export default async function Home() {
       <NavBar />
       <div className="max-w-7xl md:mx-auto mx-2">
         <div className="grid md:grid-cols-3 gap-4 mx-5 md:mx-10 my-10">
-          {data.map((data: Blog) => {
+          {data.map((data) => {
             return (
               <div
                 key={data.id}
