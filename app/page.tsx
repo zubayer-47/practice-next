@@ -15,15 +15,17 @@ interface Blog {
   createdAt: number;
 }
 
-const fetchBlogPost = async () => {
+// const fetchBlogPost = async () => {
+//   const data: Blog[] = await fetch(`${BASE_URL}/api/blog`).then((res) =>
+//     res.json()
+//   );
+//   return data;
+// };
+
+export default async function Home() {
   const data: Blog[] = await fetch(`${BASE_URL}/api/blog`).then((res) =>
     res.json()
   );
-  return data;
-};
-
-export default async function Home() {
-  const data = await fetchBlogPost();
 
   return (
     <>
