@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar";
+import { BASE_URL } from "@/lib/constents";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,7 +16,7 @@ interface Blog {
 }
 
 const fetchBlogPost = async () => {
-  const data: Blog[] = await fetch("http://localhost:3000/api/blog", {
+  const data: Blog[] = await fetch(`${BASE_URL}/api/blog`, {
     cache: "force-cache",
   }).then((res) => res.json());
   return data;
