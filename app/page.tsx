@@ -1,5 +1,5 @@
 // import NavBar from "@/components/NavBar";
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 interface Todo {
   userId: number;
