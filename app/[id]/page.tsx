@@ -1,6 +1,8 @@
 import { BASE_URL } from "@/lib/constents";
 import Image from "next/image";
 
+export const dynamic = "force-dynamic";
+
 interface Props {
   params: { id: string };
 }

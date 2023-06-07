@@ -3,7 +3,7 @@ import { BASE_URL } from "@/lib/constents";
 import Image from "next/image";
 import Link from "next/link";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 interface Blog {
   id: number;
