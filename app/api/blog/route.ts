@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { data } from "../data";
 
-export function GET() {
+export async function GET(request: Request) {
   return NextResponse.json(data);
 }
