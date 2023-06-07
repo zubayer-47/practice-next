@@ -18,9 +18,9 @@ interface Blog {
 }
 
 const getSingleBlog = async (id: string) => {
-  const blog: Blog[] = await fetch(`${BASE_URL}/api/blog/${id}`, {
-    cache: "force-cache",
-  }).then((res) => res.json());
+  const blog: Blog[] = await fetch(`${BASE_URL}/api/blog/${id}`).then((res) =>
+    res.json()
+  );
 
   return blog;
 };

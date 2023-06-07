@@ -16,9 +16,9 @@ interface Blog {
 }
 
 const fetchBlogPost = async () => {
-  const data: Blog[] = await fetch(`${BASE_URL}/api/blog`, {
-    cache: "force-cache",
-  }).then((res) => res.json());
+  const data: Blog[] = await fetch(`${BASE_URL}/api/blog`).then((res) =>
+    res.json()
+  );
   return data;
 };
 
