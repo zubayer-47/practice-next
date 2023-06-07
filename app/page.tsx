@@ -1,6 +1,5 @@
 import NavBar from "@/components/NavBar";
 import { BASE_URL } from "@/lib/constents";
-import Image from "next/image";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
@@ -28,9 +27,9 @@ export default async function Home() {
   );
 
   return (
-    <>
+    <div>
       <NavBar />
-      <main className="max-w-7xl md:mx-auto mx-2">
+      <div className="max-w-7xl md:mx-auto mx-2">
         <div className="grid md:grid-cols-3 gap-4 mx-5 md:mx-10 my-10">
           {data.map((data: Blog) => {
             return (
@@ -52,26 +51,13 @@ export default async function Home() {
                     <span className="border border-indigo-400 bg-indigo-400 text-white font-bold uppercase p-1 rounded-md text-xs transition-all">
                       {data.category}
                     </span>
-
-                    <div className="flex justify-end gap-2 items-center">
-                      <Image
-                        src={data.authorImage}
-                        width={480}
-                        height={500}
-                        alt="authorImage"
-                        className="w-8 h-8 object-cover rounded-full"
-                      />
-                      <p className="font-semibold text-xs lg:text-sm capitalize">
-                        {data.author}
-                      </p>
-                    </div>
                   </div>
                 </Link>
               </div>
             );
           })}
         </div>
-      </main>
-    </>
+      </div>
+    </div>
   );
 }
