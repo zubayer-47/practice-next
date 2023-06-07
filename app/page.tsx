@@ -3,13 +3,8 @@ import { BASE_URL } from "@/lib/constents";
 export const dynamic = "force-dynamic";
 
 interface Blog {
-  id: number;
+  id: string;
   title: string;
-  author: string;
-  authorImage: string;
-  category: string;
-  content: string;
-  createdAt: string;
 }
 
 export default async function Home() {
