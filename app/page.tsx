@@ -12,7 +12,7 @@ interface Blog {
   authorImage: string;
   category: string;
   content: string;
-  createdAt: number;
+  createdAt: string;
 }
 
 export default async function Home() {

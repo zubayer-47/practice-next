@@ -17,16 +17,13 @@ interface Blog {
   createdAt: number;
 }
 
-const getSingleBlog = async (id: string) => {
-  const blog: Blog[] = await fetch(`${BASE_URL}/api/blog/${id}`).then((res) =>
-    res.json()
-  );
-
-  return blog;
-};
-
 export default async function SingleBlog({ params: { id } }: Props) {
-  const blog: Blog[] = await getSingleBlog(id);
+  const res = await fetch(`${BASE_URL}/api/blog/${id}`, {
+    next: {
+      revalidate: 440,
+    },
+  });
+  const blog: Blog[] = await res.json();
 
   return (
     <div className="mx-4 my-10">
