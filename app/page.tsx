@@ -9,12 +9,10 @@ interface Todo {
 }
 
 export default async function Home() {
-  const data: Todo[] = await fetch(
-    "https://jsonplaceholder.typicode.com/todos/",
-    {
-      next: { revalidate: 440 },
-    }
-  ).then((res) => res.json());
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos/", {
+    next: { revalidate: 440 },
+  });
+  const data: Todo[] = await res.json();
   return (
     <div>
       {data.map((blog) => {
