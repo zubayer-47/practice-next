@@ -2,6 +2,8 @@ import NavBar from "@/components/NavBar";
 import Image from "next/image";
 import Link from "next/link";
 
+export const dynamic = "force-static";
+
 interface Blog {
   id: number;
   title: string;
@@ -12,13 +14,10 @@ interface Blog {
   createdAt: number;
 }
 
-export const dynamic = "force-static";
-
 const fetchBlogPost = async () => {
-  const response = await fetch("http://localhost:3000/api/blog", {
+  const data: Blog[] = await fetch("http://localhost:3000/api/blog", {
     cache: "force-cache",
-  });
-  const data = await response.json();
+  }).then((res) => res.json());
   return data;
 };
 
