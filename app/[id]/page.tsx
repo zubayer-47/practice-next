@@ -8,7 +8,7 @@ interface Props {
 }
 
 interface Blog {
-  id: number;
+  id: string;
   title: string;
   author: string;
   authorImage: string;
