@@ -34,7 +34,7 @@ export default async function Home() {
                 key={data.id}
                 className="p-2 md:p-4 border-2 rounded-md hover:scale-105 hover:transition-all"
               >
-                <Link href={`/${data.id}`}>
+                <Link href="/">
                   <h1 className="font-bold">{data.title}</h1>
 
                   <div className="">
