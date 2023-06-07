@@ -6,7 +6,7 @@ import Link from "next/link";
 export const dynamic = "force-dynamic";
 
 interface Blog {
-  id: number;
+  id: string;
   title: string;
   author: string;
   authorImage: string;
