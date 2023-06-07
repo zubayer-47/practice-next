@@ -1,14 +1,12 @@
-import { BASE_URL } from "@/lib/constents";
-
 export const dynamic = "force-dynamic";
 
 interface Blog {
-  id: string;
+  id: number;
   title: string;
 }
 
 export default async function Home() {
-  const res = await fetch(`${BASE_URL}/api/blog`, {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/todos/`, {
     next: {
       revalidate: 440,
     },
