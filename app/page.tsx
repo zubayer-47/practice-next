@@ -16,7 +16,11 @@ interface Blog {
 }
 
 export default async function Home() {
-  const res = await fetch(`${BASE_URL}/api/blog`);
+  const res = await fetch(`${BASE_URL}/api/blog`, {
+    next: {
+      revalidate: 440,
+    },
+  });
   const data: Blog[] = await res.json();
 
   return (
