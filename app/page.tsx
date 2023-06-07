@@ -32,8 +32,11 @@ export default async function Home() {
         <div className="grid md:grid-cols-3 gap-4 mx-5 md:mx-10 my-10">
           {data.map((data: Blog) => {
             return (
-              <Link key={data.id} href={`/${data.id}`}>
-                <div className="p-2 md:p-4 border-2 rounded-md hover:scale-105 hover:transition-all">
+              <div
+                key={data.id}
+                className="p-2 md:p-4 border-2 rounded-md hover:scale-105 hover:transition-all"
+              >
+                <Link href={`/${data.id}`}>
                   <h1 className="font-bold">{data.title}</h1>
 
                   <div className="">
@@ -61,8 +64,8 @@ export default async function Home() {
                       </p>
                     </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </div>
             );
           })}
         </div>
